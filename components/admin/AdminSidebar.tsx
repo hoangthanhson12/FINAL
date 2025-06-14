@@ -136,21 +136,6 @@ export default function AdminSidebar() {
       icon: <ShoppingCart className="h-5 w-5" />,
       title: "Đơn hàng",
       href: "/admin/orders"
-    },
-    {
-      icon: <BarChart3 className="h-5 w-5" />,
-      title: "Báo cáo",
-      href: "/admin/reports",
-      children: [
-        { title: "Doanh thu", href: "/admin/reports/revenue" },
-        { title: "Sản phẩm", href: "/admin/reports/products" },
-        { title: "Khách hàng", href: "/admin/reports/customers" }
-      ]
-    },
-    {
-      icon: <Settings className="h-5 w-5" />,
-      title: "Cài đặt",
-      href: "/admin/settings"
     }
   ];
 
@@ -246,7 +231,6 @@ export default function AdminSidebar() {
                   href={item.href}
                   isActive={isItemActive(item.href)}
                   isCollapsed={isCollapsed}
-                  children={item.children}
                 />
               ))}
             </nav>
